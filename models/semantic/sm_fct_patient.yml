@@ -10,9 +10,7 @@ semantic_models:
       - name: patient_id_details
         type: primary
         expr: patient_id
-      - name: insurance_company
-        type: foreign
-        expr: insurance_company
+
       - name: gender
         type: foreign
         expr: gender
@@ -23,7 +21,11 @@ semantic_models:
         type_params:
           time_granularity: day
 
+      - name: insurance_company
+        type: categorical
+        expr: insurance_company
+
     measures:
       - name: total_patient_count
         expr: patient_id
-        agg: count_distinct
+        agg: count_distinct 
