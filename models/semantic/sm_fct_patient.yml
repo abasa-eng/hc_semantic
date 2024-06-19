@@ -10,6 +10,9 @@ semantic_models:
       - name: patient_id_details
         type: primary
         expr: patient_id
+      - name: insurance_company
+        type: foreign
+        expr: insurance_company
 
     dimensions:
       - name: start_date
