@@ -1,0 +1,13 @@
+version: 2 
+
+metrics:
+
+  - name: total_count_patient
+    description: "Total count of patients"
+    type: simple
+    label: Total patient count
+    type_params:
+      measure:
+        name: total_patient_count
+        fill_nulls_with: 0 
+        join_to_timespine: true
