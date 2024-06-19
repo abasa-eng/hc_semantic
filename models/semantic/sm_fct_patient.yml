@@ -13,6 +13,9 @@ semantic_models:
       - name: insurance_company
         type: foreign
         expr: insurance_company
+      - name: gender
+        type: foreign
+        expr: gender
 
     dimensions:
       - name: start_date
