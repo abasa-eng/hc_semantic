@@ -11,3 +11,15 @@ metrics:
         name: total_patient_count
         fill_nulls_with: 0 
         join_to_timespine: true
+
+  - name: total_patient_by_insurance
+    description: "Total count of patients by insurance"
+    type: simple
+    label: Total patient count, segregated by insurance company
+    type_params:
+      measure:
+        name: total_patient_count
+        fill_nulls_with: 0 
+        join_to_timespine: true
+    filter: |
+      {{ Metric (total_patient_count, group_by = ['insurance_company']) }}
