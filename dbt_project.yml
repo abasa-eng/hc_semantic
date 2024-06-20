@@ -46,3 +46,9 @@ models:
       +materialized: view
     models/semantic:
       +materialized: view
+
+saved-queries:
+  my_saved_query:
+    config:
+      +cache:
+        enabled: true
