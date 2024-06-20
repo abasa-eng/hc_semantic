@@ -2,9 +2,6 @@ saved_queries:
   - name: test_saved_query
     description: "Testing"
     label: test
-    config:
-      cache:
-        enabled: true
     query_params:
       metrics:
         - total_count_patient
